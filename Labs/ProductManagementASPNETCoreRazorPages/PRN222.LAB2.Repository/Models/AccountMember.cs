@@ -5,7 +5,7 @@ namespace PRN222.LAB2.Repository.Models;
 
 public partial class AccountMember
 {
-    public string MemerId { get; set; } = null!;
+    public string MemberId { get; set; } = null!;
 
     public string MemberPassword { get; set; } = null!;
 

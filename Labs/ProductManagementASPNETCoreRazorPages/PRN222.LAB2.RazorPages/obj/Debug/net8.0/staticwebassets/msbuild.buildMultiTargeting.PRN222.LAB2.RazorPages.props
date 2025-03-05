@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PRN222.LAB2.RazorPages.props" />
+</Project>

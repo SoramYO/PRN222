@@ -56,7 +56,7 @@ namespace ProductManagementRazorPages.Pages
 
 			var claims = new List<Claim>
 			{
-				new Claim(ClaimTypes.NameIdentifier, memberAccount.MemerId),
+				new Claim(ClaimTypes.NameIdentifier, memberAccount.MemberId),
 				new Claim(ClaimTypes.Name, memberAccount.FullName),
 				new Claim(ClaimTypes.Email, memberAccount.EmailAddress)
 			};

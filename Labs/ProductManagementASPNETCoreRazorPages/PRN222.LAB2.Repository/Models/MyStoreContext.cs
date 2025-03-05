@@ -29,13 +29,13 @@ public partial class MyStoreContext : DbContext
     {
         modelBuilder.Entity<AccountMember>(entity =>
         {
-            entity.HasKey(e => e.MemerId).HasName("PK__AccountM__12146245C21C2760");
+            entity.HasKey(e => e.MemberId).HasName("PK__AccountM__12146245C21C2760");
 
             entity.ToTable("AccountMember");
 
-            entity.Property(e => e.MemerId)
+            entity.Property(e => e.MemberId)
                 .HasMaxLength(20)
-                .HasColumnName("MemerID");
+                .HasColumnName("MemberID");
             entity.Property(e => e.EmailAddress).HasMaxLength(100);
             entity.Property(e => e.FullName).HasMaxLength(80);
             entity.Property(e => e.MemberPassword).HasMaxLength(80);

@@ -1,7 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\son\\Downloads\\Labs\\ProductManagementASPNETCoreRazorPages\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|d:\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.repository\\models\\mystorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|solutionrelative:prn222.lab2.repository\\models\\mystorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|d:\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|d:\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.repository\\models\\accountmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|solutionrelative:prn222.lab2.repository\\models\\accountmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\Pages\\Login.cshtml.cs",
+              "ToolTip": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Login.cshtml.cs",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\Pages\\Login.cshtml.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T10:44:18.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyStoreContext.cs",
+              "DocumentMoniker": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\MyStoreContext.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.Repository\\Models\\MyStoreContext.cs",
+              "ToolTip": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\MyStoreContext.cs",
+              "RelativeToolTip": "PRN222.LAB2.Repository\\Models\\MyStoreContext.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T10:43:53.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountMember.cs",
+              "DocumentMoniker": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\AccountMember.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.Repository\\Models\\AccountMember.cs",
+              "ToolTip": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\AccountMember.cs",
+              "RelativeToolTip": "PRN222.LAB2.Repository\\Models\\AccountMember.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T10:42:57.761Z",
+              "EditorCaption": ""
             }
           ]
         }
