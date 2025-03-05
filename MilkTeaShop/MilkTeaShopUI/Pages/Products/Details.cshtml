@@ -1,0 +1,184 @@
+﻿@page "{id:int}"
+@using MilkTeaShopBOs.Models
+@model DetailsModel
+@{
+	ViewData["Title"] = Model.Product?.ProductName;
+}
+
+<div class="container">
+	<div class="row">
+		<!-- Product Image -->
+		<div class="col-md-6">
+			@if (!string.IsNullOrEmpty(Model.Product?.ImageUrl))
+			{
+				<img src="@Model.Product.ImageUrl" class="img-fluid rounded" alt="@Model.Product.ProductName">
+			}
+		</div>
+
+		<!-- Product Details -->
+		<div class="col-md-6">
+			<h1 class="mb-4">@Model.Product?.ProductName</h1>
+			<p class="lead">@Model.Product?.Description</p>
+
+			<form id="addToCartForm" onsubmit="return addToCart(event)" class="mt-4">
+				<!-- Size Selection -->
+				<div class="mb-4">
+					<h5>Choose Size:</h5>
+					<div class="btn-group" role="group">
+						@foreach (var variant in Model.Product?.ProductVariants ?? new List<ProductVariant>())
+						{
+							<input type="radio" class="btn-check" name="VariantId" id="size_@variant.VariantId"
+								value="@variant.VariantId" required>
+							<label class="btn btn-outline-primary" for="size_@variant.VariantId">
+								@variant.Size (@variant.Price VNĐ)
+							</label>
+						}
+					</div>
+				</div>
+
+				<!-- Extra Products -->
+				<div class="mb-4">
+					<h5>Add Extra Toppings: <small class="text-muted">(Tối đa 3 loại)</small></h5>
+					<div class="row row-cols-1 row-cols-md-2 g-3">
+						@foreach (var extra in Model.ExtraProducts)
+						{
+							<div class="col">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" name="ExtraProducts"
+										value="@extra.ExtraProductId" id="extra_@extra.ExtraProductId"
+										onchange="handleExtraProductChange(this)">
+									<label class="form-check-label" for="extra_@extra.ExtraProductId">
+										@extra.ExtraProductName (@extra.Price.ToString("#,##0") VNĐ)
+									</label>
+								</div>
+							</div>
+						}
+					</div>
+				</div>
+
+				<!-- Quantity -->
+				<div class="mb-4">
+					<label for="quantity" class="form-label">Quantity:</label>
+					<input type="number" class="form-control" id="quantity" name="Quantity" value="1" min="1" required
+						style="width: 100px;">
+				</div>
+
+				<button type="submit" class="btn btn-primary btn-lg">Add to Cart</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+	<script>
+		function handleExtraProductChange(checkbox) {
+			const checkedExtras = document.querySelectorAll('input[name="ExtraProducts"]:checked');
+			if (checkedExtras.length > 3) {
+				checkbox.checked = false;
+				Swal.fire({
+					icon: 'warning',
+					title: 'Oops...',
+					text: 'Bạn chỉ được chọn tối đa 3 loại topping!'
+				});
+			}
+		}
+
+		function addToCart(event) {
+			event.preventDefault();
+
+			// Lấy thông tin sản phẩm được chọn
+			const selectedVariant = document.querySelector('input[name="VariantId"]:checked');
+			if (!selectedVariant) {
+				Swal.fire({
+					icon: 'warning',
+					title: 'Lỗi',
+					text: 'Vui lòng chọn size'
+				});
+				return false;
+			}
+
+			const selectedExtras = Array.from(document.querySelectorAll('input[name="ExtraProducts"]:checked'));
+			if (selectedExtras.length > 3) {
+				Swal.fire({
+					icon: 'warning',
+					title: 'Lỗi',
+					text: 'Bạn chỉ được chọn tối đa 3 loại topping!'
+				});
+				return false;
+			}
+
+			const extraProducts = selectedExtras.map(checkbox => {
+				const priceText = checkbox.nextElementSibling.textContent.split('(')[1].replace('VNĐ)', '').trim();
+				return {
+					id: parseInt(checkbox.value),
+					name: checkbox.nextElementSibling.textContent.split('(')[0].trim(),
+					price: parseFloat(priceText.replace(/,/g, ''))
+				};
+			});
+
+			const quantity = parseInt(document.getElementById('quantity').value);
+			const variant = {
+				id: parseInt(selectedVariant.value),
+				size: selectedVariant.nextElementSibling.textContent.split('(')[0].trim(),
+				price: parseFloat(selectedVariant.nextElementSibling.textContent.match(/\d+/g)[0])
+			};
+
+			// Tạo object chứa thông tin sản phẩm
+			const product = {
+				id: @Model.Product.ProductId,
+				name: "@Model.Product.ProductName",
+				image: "@Model.Product.ImageUrl",
+				variant: variant,
+				extras: extraProducts,
+				quantity: quantity,
+				totalPrice: (variant.price + extraProducts.reduce((sum, extra) => sum + extra.price, 0)) * quantity
+			};
+
+			// Lưu vào localStorage
+			let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+			// Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+			const existingItemIndex = cart.findIndex(item =>
+				item.id === product.id &&
+				item.variant.id === product.variant.id &&
+				JSON.stringify(item.extras) === JSON.stringify(product.extras)
+			);
+
+			if (existingItemIndex !== -1) {
+				cart[existingItemIndex].quantity += quantity;
+				cart[existingItemIndex].totalPrice =
+					(cart[existingItemIndex].variant.price +
+						cart[existingItemIndex].extras.reduce((sum, extra) => sum + extra.price, 0)) *
+					cart[existingItemIndex].quantity;
+			} else {
+				cart.push(product);
+			}
+
+			localStorage.setItem('cart', JSON.stringify(cart));
+
+			// Cập nhật số lượng sản phẩm trong giỏ hàng trên header
+			updateCartBadge();
+
+			Swal.fire({
+				icon: 'success',
+				title: 'Thành công!',
+				text: 'Đã thêm sản phẩm vào giỏ hàng',
+				showConfirmButton: false,
+				timer: 1500
+			});
+			return false;
+		}
+
+		function updateCartBadge() {
+			const cart = JSON.parse(localStorage.getItem('cart')) || [];
+			const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+			const badge = document.querySelector('.badge');
+			if (badge) {
+				badge.textContent = totalItems;
+			}
+		}
+
+		// Cập nhật badge khi trang được tải
+		document.addEventListener('DOMContentLoaded', updateCartBadge);
+	</script>
+}

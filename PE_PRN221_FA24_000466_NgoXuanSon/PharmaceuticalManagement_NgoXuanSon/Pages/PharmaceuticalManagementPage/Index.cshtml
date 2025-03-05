@@ -1,0 +1,95 @@
+﻿@page
+@model PharmaceuticalManagement_NgoXuanSon.Pages.PharmaceuticalManagementPage.IndexModel
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+	<a asp-page="Create">Create New</a>
+</p>
+@if (TempData["Message"] != null)
+{
+	<div class="alert alert-danger" role="alert">
+		@TempData["Message"]
+	</div>
+}
+
+<form method="get">
+	<div class="form-group m-2">
+		<input type="text" name="SearchTerm" class="form-control" />
+	</div>
+	<button type="submit" class="btn btn-primary">Search</button
+</form>
+
+
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.MedicineInformation[0].MedicineName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.MedicineInformation[0].ActiveIngredients)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.MedicineInformation[0].ExpirationDate)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.MedicineInformation[0].DosageForm)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.MedicineInformation[0].WarningsAndPrecautions)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.MedicineInformation[0].Manufacturer.ManufacturerName)
+			</th>
+
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.MedicineInformation)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.MedicineName)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.ActiveIngredients)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.ExpirationDate)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.DosageForm)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.WarningsAndPrecautions)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Manufacturer.ManufacturerName)
+				</td>
+				<td>
+					<a asp-page="./Edit" asp-route-id="@item.MedicineId">Edit</a> |
+					<a asp-page="./Details" asp-route-id="@item.MedicineId">Details</a> |
+					<a asp-page="./Delete" asp-route-id="@item.MedicineId">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<ul class="pagination">
+	@for(var i = 1; i <= Model.TotalPages; i++)
+	{
+		<li class="page-item @(i == Model.PageIndex ? "active" : "")">
+			<a class="page-link" asp-route-pageIndex="@i">@i</a>
+		</li>
+	}
+</ul>

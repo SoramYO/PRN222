@@ -1,0 +1,85 @@
+﻿@page
+@model IndexModel
+@{
+	ViewData["Title"] = "Welcome";
+}
+
+<!-- Hero Section -->
+<div class="hero-section text-center text-white py-5 mb-5">
+	<div class="container">
+		<h1 class="display-4 fw-bold">Discover the Perfect Milk Tea</h1>
+		<p class="lead">Experience the authentic taste of premium milk tea with our handcrafted beverages</p>
+		<a asp-page="/Products" class="btn btn-primary btn-lg">Order Now</a>
+	</div>
+</div>
+
+<!-- Featured Products Section -->
+<section class="featured-products py-5">
+	<div class="container">
+		<h2 class="text-center mb-4">Popular Drinks</h2>
+		<div class="row">
+			<div class="col-md-4 mb-4">
+				<div class="card h-100 shadow-sm">
+					<img src="/images/classic-milk-tea.jpg" class="card-img-top" alt="Classic Milk Tea">
+					<div class="card-body">
+						<h5 class="card-title">Classic Milk Tea</h5>
+						<p class="card-text">
+							Our signature milk tea with perfect blend of premium tea and creamy milk.
+						</p>
+						<a href="#" class="btn btn-primary">Order Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="card h-100 shadow-sm">
+					<img src="/images/brown-sugar-tea.jpg" class="card-img-top" alt="Brown Sugar Milk Tea">
+					<div class="card-body">
+						<h5 class="card-title">Brown Sugar Milk Tea</h5>
+						<p class="card-text">Rich and creamy milk tea with caramelized brown sugar syrup.</p>
+						<a href="#" class="btn btn-primary">Order Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="card h-100 shadow-sm">
+					<img src="/images/taro-milk-tea.jpg" class="card-img-top" alt="Taro Milk Tea">
+					<div class="card-body">
+						<h5 class="card-title">Taro Milk Tea</h5>
+						<p class="card-text">Smooth and creamy taro flavored milk tea with chewy pearls.</p>
+						<a href="#" class="btn btn-primary">Order Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Features Section -->
+<section class="features bg-light py-5">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-4 mb-4">
+				<div class="feature-item">
+					<i class="fas fa-leaf fa-3x text-primary mb-3"></i>
+					<h4>Premium Quality</h4>
+					<p>We use only the finest tea leaves and ingredients</p>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="feature-item">
+					<i class="fas fa-clock fa-3x text-primary mb-3"></i>
+					<h4>Fast Service</h4>
+					<p>Quick preparation and delivery service</p>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="feature-item">
+					<i class="fas fa-heart fa-3x text-primary mb-3"></i>
+					<h4>Made with Love</h4>
+					<p>Crafted with passion and care</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+

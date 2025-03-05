@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSLLocal", "SSLLocal\SSLLocal.csproj", "{2B98630F-6CEA-4D3E-97D8-EC9029CB149E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSLClient", "SSLClient\SSLClient.csproj", "{09FB5CC7-E85B-4947-AED1-2847D485C0FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client_WPF", "Client_WPF\Client_WPF.csproj", "{FAAF0B1A-6901-431D-AF7F-7EB365616C44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B98630F-6CEA-4D3E-97D8-EC9029CB149E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B98630F-6CEA-4D3E-97D8-EC9029CB149E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B98630F-6CEA-4D3E-97D8-EC9029CB149E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B98630F-6CEA-4D3E-97D8-EC9029CB149E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09FB5CC7-E85B-4947-AED1-2847D485C0FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09FB5CC7-E85B-4947-AED1-2847D485C0FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09FB5CC7-E85B-4947-AED1-2847D485C0FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09FB5CC7-E85B-4947-AED1-2847D485C0FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAAF0B1A-6901-431D-AF7F-7EB365616C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAF0B1A-6901-431D-AF7F-7EB365616C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAF0B1A-6901-431D-AF7F-7EB365616C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAAF0B1A-6901-431D-AF7F-7EB365616C44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
