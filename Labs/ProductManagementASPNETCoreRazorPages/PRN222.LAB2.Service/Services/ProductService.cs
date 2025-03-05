@@ -56,19 +56,18 @@ namespace PRN222.LAB2.Service.Services
 			int pageIndex,
 			int pageSize,
 			string searchTerm,
-			Func<IQueryable<Product>, IOrderedQueryable<Product>>? orderBy = null
-		)
+			string orderBy)
 		{
 			Expression<Func<Product, object>>[] include = { p => p.Category };
 
-
 			var products = await _unitOfWork.Products.Get(include);
-			if(!string.IsNullOrEmpty(searchTerm))
+			if (!string.IsNullOrEmpty(searchTerm))
 			{
-				products = products.Where(p => p.ProductName.ToLower().Contains(searchTerm.ToLower()));
+				products = products.Where(p => p.ProductName != null &&
+								  p.ProductName.Contains(searchTerm ?? "", StringComparison.CurrentCultureIgnoreCase))
+								 .ToList();
 			}
 
-				
 			int count = products.Count();
 			int totalPages = (int)Math.Ceiling(count / (double)pageSize);
 			var pagedProducts = products.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();

@@ -49,16 +49,16 @@ namespace PRN222.LAB2.RazorPages.Pages.Product
 			// 	return Page();
 			// }
 			// return RedirectToPage("/Login");
-			    var result = await _productService.GetProductsAsync(
-        filter: !string.IsNullOrEmpty(SearchTerm) ? p => p.ProductName.Contains(SearchTerm) : null,
-        orderBy: null,
-        pageIndex: pageIndex,
-        pageSize: PageSize
-    );
-    PageIndex = result.PageIndex;
-    TotalPages = result.TotalPages;
-    Product = result.Products;
-    return Page();
+			var result = await _productService.GetProductsAsync(
+				searchTerm: SearchTerm,
+				orderBy: OrderBy,
+				pageIndex: pageIndex,
+				pageSize: PageSize
+			);
+			PageIndex = result.PageIndex;
+			TotalPages = result.TotalPages;
+			Product = result.Products;
+			return Page();
 		}
 	}
 }

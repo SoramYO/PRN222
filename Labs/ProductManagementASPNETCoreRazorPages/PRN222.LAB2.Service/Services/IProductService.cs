@@ -20,8 +20,8 @@ namespace PRN222.LAB2.Service.Services
 		Task<PaintingResponse> GetProductsAsync(
 			int pageIndex,
 			int pageSize,
-			Expression<Func<Product, bool>> filter = null,
-			Func<IQueryable<Product>, IOrderedQueryable<Product>> orderBy = null
+			string searchTerm,
+			string orderBy
 		);
 
 		Task<Product> GetProductByIdAsync(int id);

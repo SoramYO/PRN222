@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PRN222.Lab1.MVC.props" />
+</Project>

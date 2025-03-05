@@ -2,42 +2,221 @@
 @model PRN222.LAB2.RazorPages.Pages.Product.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+	ViewData["Title"] = "Product Details";
 }
 
-<h1>Details</h1>
+<div class="details-container">
+	<div class="details-header">
+		<h1>Product Details</h1>
+		<p>View complete information about this product</p>
+	</div>
 
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Product.ProductName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Product.ProductName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Product.UnitsInStock)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Product.UnitsInStock)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Product.UnitPrice)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Product.UnitPrice)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Product.Category)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Product.Category.CategoryName)
-        </dd>
-    </dl>
+	<div class="details-card">
+		<div class="product-header">
+			<h2>@Model.Product.ProductName</h2>
+			<div class="product-category">
+				<span class="category-badge">@Model.Product.Category.CategoryName</span>
+			</div>
+		</div>
+
+		<div class="product-info">
+			<div class="info-group">
+				<div class="info-label">Price</div>
+				<div class="info-value price-value">$@Html.DisplayFor(model => model.Product.UnitPrice)</div>
+			</div>
+
+			<div class="info-group">
+				<div class="info-label">Stock</div>
+				<div class="info-value stock-value">
+					<span class="stock-indicator @(Model.Product.UnitsInStock > 10 ? "in-stock" : (Model.Product.UnitsInStock > 0 ? "low-stock" : "out-of-stock"))"></span>
+					@Html.DisplayFor(model => model.Product.UnitsInStock) units
+				</div>
+			</div>
+
+			<div class="info-divider"></div>
+
+			<div class="info-group">
+				<div class="info-label">Product ID</div>
+				<div class="info-value">@Model.Product.ProductId</div>
+			</div>
+
+			<div class="info-group">
+				<div class="info-label">Category</div>
+				<div class="info-value">@Html.DisplayFor(model => model.Product.Category.CategoryName)</div>
+			</div>
+		</div>
+
+		<div class="action-buttons">
+			<a asp-page="./Edit" asp-route-id="@Model.Product.ProductId" class="btn-edit">
+				<i class="fas fa-edit"></i> Edit Product
+			</a>
+			<a asp-page="./Index" class="btn-back">
+				<i class="fas fa-arrow-left"></i> Back to List
+			</a>
+		</div>
+	</div>
 </div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Product.ProductId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
-</div>
+
+
+<style>
+	.details-container {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 20px;
+	}
+
+	.details-header {
+		margin-bottom: 25px;
+		text-align: center;
+	}
+
+		.details-header h1 {
+			font-size: 28px;
+			color: #334152;
+			margin-bottom: 8px;
+		}
+
+		.details-header p {
+			color: #6c757d;
+			font-size: 16px;
+		}
+
+	.details-card {
+		background-color: white;
+		border-radius: 8px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+		padding: 30px;
+		margin-bottom: 30px;
+	}
+
+	.product-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 25px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #e1e5eb;
+	}
+
+		.product-header h2 {
+			font-size: 24px;
+			font-weight: 600;
+			color: #334152;
+			margin: 0;
+		}
+
+	.category-badge {
+		display: inline-block;
+		padding: 6px 12px;
+		background-color: #e9f2ff;
+		color: #4a90e2;
+		border-radius: 20px;
+		font-size: 14px;
+		font-weight: 500;
+	}
+
+	.product-info {
+		margin-bottom: 30px;
+	}
+
+	.info-group {
+		display: flex;
+		margin-bottom: 16px;
+	}
+
+	.info-label {
+		flex: 0 0 120px;
+		font-weight: 500;
+		color: #6c757d;
+	}
+
+	.info-value {
+		flex: 1;
+		color: #334152;
+	}
+
+	.price-value {
+		font-size: 18px;
+		font-weight: 600;
+		color: #28a745;
+	}
+
+	.stock-value {
+		display: flex;
+		align-items: center;
+	}
+
+	.stock-indicator {
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		margin-right: 8px;
+	}
+
+	.in-stock {
+		background-color: #28a745;
+	}
+
+	.low-stock {
+		background-color: #ffc107;
+	}
+
+	.out-of-stock {
+		background-color: #dc3545;
+	}
+
+	.info-divider {
+		height: 1px;
+		background-color: #e9ecef;
+		margin: 20px 0;
+	}
+
+	.action-buttons {
+		display: flex;
+		gap: 15px;
+		margin-top: 10px;
+	}
+
+	.btn-edit, .btn-back {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 12px 24px;
+		font-size: 16px;
+		font-weight: 500;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		text-decoration: none;
+	}
+
+	.btn-edit {
+		background-color: #4a90e2;
+		color: white;
+		border: none;
+	}
+
+		.btn-edit:hover {
+			background-color: #3a7bc8;
+			color: white;
+			text-decoration: none;
+		}
+
+	.btn-back {
+		background-color: #f8f9fa;
+		color: #6c757d;
+		border: 1px solid #ced4da;
+	}
+
+		.btn-back:hover {
+			background-color: #e9ecef;
+			color: #5a6268;
+			text-decoration: none;
+		}
+
+		.btn-edit i, .btn-back i {
+			margin-right: 8px;
+		}
+
+</style>
