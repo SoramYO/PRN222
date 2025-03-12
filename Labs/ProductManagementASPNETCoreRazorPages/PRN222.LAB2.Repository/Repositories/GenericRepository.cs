@@ -20,7 +20,7 @@ namespace PRN222.LAB2.Repository.Repositories
 			_dbSet = context.Set<T>();
 		}
 
-		#region Get All
+		#region Get All With Includes
 		public async Task<List<T>> Get(params Expression<Func<T, object>>[] includes)
 		{
 			try

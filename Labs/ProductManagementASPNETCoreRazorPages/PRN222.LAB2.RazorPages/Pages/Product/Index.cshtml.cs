@@ -24,7 +24,7 @@ namespace PRN222.LAB2.RazorPages.Pages.Product
 		public int PageIndex { get; set; } = 1;
 
 		public int TotalPages { get; set; }
-		public int PageSize { get; set; } = 10;
+		public int PageSize { get; set; } = 3;
 		public IndexModel(IProductService productService)
 		{
 			_productService = productService;

@@ -16,7 +16,7 @@ namespace PRN222.LAB2.RazorPages
 			// Add services to the container.
 
 			builder.Services.AddDbContext<MyStoreContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
 
 			builder.Services.AddScoped<IProductService, ProductService>();
 			builder.Services.AddScoped<ICategoryService, CategoryService>();
@@ -34,7 +34,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 				options.Cookie.HttpOnly = true;
 				options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
 				options.LoginPath = "/Login";
-				options.AccessDeniedPath = "/AccessDenied";
+				options.AccessDeniedPath = "/Home";
 				options.SlidingExpiration = true;
 			});
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +11,8 @@ using PRN222.LAB2.Service.Services;
 
 namespace PRN222.LAB2.RazorPages.Pages.Product
 {
-    public class DetailsModel : PageModel
+	[Authorize]
+	public class DetailsModel : PageModel
     {
 		private readonly IProductService _productService;
 

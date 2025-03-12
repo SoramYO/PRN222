@@ -2,24 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using PRN222.LAB2.RazorPages.SignalHub;
 using PRN222.LAB2.Repository.Models;
 using PRN222.LAB2.Service.Services;
 
 namespace PRN222.LAB2.RazorPages.Pages.Product
 {
-    public class EditModel : PageModel
+	[Authorize]
+	public class EditModel : PageModel
     {
 		private readonly IProductService _productService;
         private readonly ICategoryService _categoryService;
-
-		public EditModel(IProductService productService, ICategoryService categoryService)
+		private readonly IHubContext<SignalrServer> _hubContext;
+		public EditModel(IProductService productService, ICategoryService categoryService, IHubContext<SignalrServer> hubContext)
         {
 			_productService = productService;
 			_categoryService = categoryService;
+            _hubContext = hubContext;
 
 		}
 
@@ -52,6 +57,7 @@ namespace PRN222.LAB2.RazorPages.Pages.Product
 			try
             {
                 await _productService.UpdateProductAsync(Product);
+				await _hubContext.Clients.All.SendAsync("LoadAllItems");
 			}
             catch (DbUpdateConcurrencyException)
             {

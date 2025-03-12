@@ -1,17 +1,89 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\",
+  "WorkspaceRootPath": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|d:\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.repository\\models\\mystorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\pages\\product\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\pages\\product\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\pages\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\pages\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\pages\\product\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\pages\\product\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\signalhub\\signalrserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\signalhub\\signalrserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.repository\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|solutionrelative:prn222.lab2.repository\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.repository\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|solutionrelative:prn222.lab2.repository\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B94199F-7BF9-420E-B73D-958936F81188}|PRN222.LAB2.Service\\PRN222.LAB2.Service.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.service\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B94199F-7BF9-420E-B73D-958936F81188}|PRN222.LAB2.Service\\PRN222.LAB2.Service.csproj|solutionrelative:prn222.lab2.service\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.repository\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|solutionrelative:prn222.lab2.repository\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\pages\\product\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\pages\\product\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\pages\\product\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\pages\\product\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\pages\\product\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\pages\\product\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\pages\\product\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\pages\\product\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.repository\\models\\mystorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|solutionrelative:prn222.lab2.repository\\models\\mystorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|d:\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|solutionrelative:prn222.lab2.repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\pages\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\pages\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.razorpages\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{759D205F-1E23-4C13-A0DD-94A3A7CDC660}|PRN222.LAB2.RazorPages\\PRN222.LAB2.RazorPages.csproj|solutionrelative:prn222.lab2.razorpages\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|d:\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.repository\\models\\accountmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|c:\\users\\ngoxu\\downloads\\documents\\prn222\\labs\\productmanagementaspnetcorerazorpages\\prn222.lab2.repository\\models\\accountmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C5DCBA0-7BA8-4ED7-9663-809BAC9FED6D}|PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj|solutionrelative:prn222.lab2.repository\\models\\accountmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,19 +94,249 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 12,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "libman.json",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\libman.json",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\libman.json",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\libman.json",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\libman.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-12T04:52:12.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.Repository\\UnitOfWork\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeToolTip": "PRN222.LAB2.Repository\\UnitOfWork\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T04:51:38.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductModel.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\ProductModel.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\Pages\\Product\\ProductModel.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\ProductModel.cs",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\Pages\\Product\\ProductModel.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAswGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T04:48:54.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.Repository\\UnitOfWork\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeToolTip": "PRN222.LAB2.Repository\\UnitOfWork\\UnitOfWork.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T04:28:12.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.Repository\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "PRN222.LAB2.Repository\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T04:27:44.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Service\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.Service\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Service\\Services\\ProductService.cs",
+              "RelativeToolTip": "PRN222.LAB2.Service\\Services\\ProductService.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAIwD4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T04:19:48.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\Pages\\Product\\Details.cshtml.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Details.cshtml.cs",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\Pages\\Product\\Details.cshtml.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T04:19:00.066Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\Pages\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Create.cshtml",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\Pages\\Product\\Create.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T04:18:15.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.Repository\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\Product.cs",
+              "RelativeToolTip": "PRN222.LAB2.Repository\\Models\\Product.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T04:17:55.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\Pages\\Product\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Index.cshtml.cs",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\Pages\\Product\\Index.cshtml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T03:18:11.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\Pages\\Product\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Edit.cshtml.cs",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\Pages\\Product\\Edit.cshtml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T03:15:43.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\Pages\\Product\\Delete.cshtml.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Delete.cshtml.cs",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\Pages\\Product\\Delete.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T03:14:34.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\Pages\\Product\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Create.cshtml.cs",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\Pages\\Product\\Create.cshtml.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAgwAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T03:13:22.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-12T03:12:52.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\Pages\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Product\\Index.cshtml",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\Pages\\Product\\Index.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAtwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T03:12:29.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SignalrServer.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\SignalHub\\SignalrServer.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\SignalHub\\SignalrServer.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\SignalHub\\SignalrServer.cs",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\SignalHub\\SignalrServer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T03:12:16.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\appsettings.json",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\appsettings.json",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\appsettings.json",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-12T03:02:33.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Program.cs",
+              "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\Program.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Program.cs",
+              "RelativeToolTip": "PRN222.LAB2.RazorPages\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAQwBIAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T03:02:20.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "PRN222.LAB2.RazorPages\\Pages\\Login.cshtml.cs",
-              "ToolTip": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.RazorPages\\Pages\\Login.cshtml.cs",
               "RelativeToolTip": "PRN222.LAB2.RazorPages\\Pages\\Login.cshtml.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAowDoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -43,29 +345,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 14,
               "Title": "MyStoreContext.cs",
-              "DocumentMoniker": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\MyStoreContext.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\MyStoreContext.cs",
               "RelativeDocumentMoniker": "PRN222.LAB2.Repository\\Models\\MyStoreContext.cs",
-              "ToolTip": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\MyStoreContext.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\MyStoreContext.cs",
               "RelativeToolTip": "PRN222.LAB2.Repository\\Models\\MyStoreContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAiwBgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwCoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T10:43:53.178Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 20,
               "Title": "AccountMember.cs",
-              "DocumentMoniker": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\AccountMember.cs",
+              "DocumentMoniker": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\AccountMember.cs",
               "RelativeDocumentMoniker": "PRN222.LAB2.Repository\\Models\\AccountMember.cs",
-              "ToolTip": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\AccountMember.cs",
+              "ToolTip": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\Models\\AccountMember.cs",
               "RelativeToolTip": "PRN222.LAB2.Repository\\Models\\AccountMember.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T10:42:57.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T10:42:57.761Z"
             }
           ]
         }

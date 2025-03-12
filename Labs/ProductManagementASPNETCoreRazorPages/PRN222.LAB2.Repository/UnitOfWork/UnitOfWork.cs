@@ -19,7 +19,7 @@ namespace PRN222.LAB2.Repository.UnitOfWork
 		{
 			_context = context;
 		}
-
+		//Categoriesrepo...
 		public IGenericRepository<Category> Categories =>
 			_categoryRepository ??= new GenericRepository<Category>(_context);
 

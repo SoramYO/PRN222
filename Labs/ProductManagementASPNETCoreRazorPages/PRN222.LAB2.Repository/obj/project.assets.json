@@ -5029,23 +5029,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\son\\.nuget\\packages\\": {},
+    "C:\\Users\\ngoxu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj",
       "projectName": "PRN222.LAB2.Repository",
-      "projectPath": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj",
-      "packagesPath": "C:\\Users\\son\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\obj\\",
+      "projectPath": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\PRN222.LAB2.Repository.csproj",
+      "packagesPath": "C:\\Users\\ngoxu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ngoxu\\Downloads\\Documents\\PRN222\\Labs\\ProductManagementASPNETCoreRazorPages\\PRN222.LAB2.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\son\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ngoxu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5054,7 +5054,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

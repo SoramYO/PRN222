@@ -4,5 +4,7 @@ namespace PRN222.LAB2.RazorPages.SignalHub
 {
 	public class SignalrServer : Hub
 	{
+		public const string LoadProducts = "LoadAllItems";
+
 	}
 }
