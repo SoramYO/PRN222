@@ -1,0 +1,441 @@
+----------------------------Create model class--------------------------------
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.2" />
+	</ItemGroup>
+
+
+	==================================command create model ==================================
+dotnet ef dbcontext scaffold "Server=(local);uid=sa;pwd=12345;database=UniversityDb;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models
+========================================Appsettings.json=======================================
+    "ConnectionStrings": {
+        "DefaultConnectionString": "Server=(local);Uid=sa;Pwd=12345;Database=Fall24PharmaceuticalDB;TrustServerCertificate=True"
+    }
+	================================Program.cs===========================================
+			builder.Services.AddDbContext<Fall24PharmaceuticalDBContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
+			builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+			.AddCookie(options =>
+			{
+				options.Cookie.HttpOnly = true;
+				options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+				options.LoginPath = "/Login";
+				options.AccessDeniedPath = "/Home";
+				options.SlidingExpiration = true;
+			});
+			app.UseAuthentication();
+
+			app.UseAuthorization();
+
+===============IGenericRepository======================
+
+
+	public interface IGenericRepository<T> where T : class
+	{
+		Task<List<T>> Get(params Expression<Func<T, object>>[] includes);
+		Task<T> GetById(object id, params Expression<Func<T, object>>[] includes);
+		void Add(T entity);
+		void Update(T entity);
+		void Delete(T entity);
+	}
+
+==================GenericRepository======================
+
+public class GenericRepository<T> : IGenericRepository<T> where T : class
+{
+	protected readonly Fall24PharmaceuticalDbContext _context;
+	protected readonly DbSet<T> _dbSet;
+
+	public GenericRepository(Fall24PharmaceuticalDbContext context)
+	{
+		_context = context;
+		_dbSet = context.Set<T>();
+	}
+
+	#region Get All With Includes
+	public async Task<List<T>> Get(params Expression<Func<T, object>>[] includes)
+	{
+		try
+		{
+			IQueryable<T> query = _dbSet;
+
+			foreach (var include in includes)
+			{
+				query = query.Include(include);
+			}
+
+			return await query.ToListAsync();
+		}
+		catch (Exception ex)
+		{
+			throw new Exception($"Error retrieving data: {ex.Message}", ex);
+		}
+	}
+	#endregion
+
+	#region Get by Id
+		public async Task<T?> GetById(object id, params Expression<Func<T, object>>[] includes)
+		{
+			IQueryable<T> query = _dbSet;
+			foreach (var include in includes)
+			{
+				query = query.Include(include);
+			}
+
+			// Look for the key property with KeyAttribute or fallback to common primary key names
+			var keyProperty = typeof(T).GetProperties().FirstOrDefault(p => p.GetCustomAttributes(typeof(KeyAttribute), true).Any())
+							  ?? typeof(T).GetProperties().FirstOrDefault(p => p.Name.EndsWith("Id", StringComparison.OrdinalIgnoreCase));
+
+			if (keyProperty == null)
+			{
+				throw new InvalidOperationException($"No key property found for type {typeof(T).Name}");
+			}
+
+			// Convert string id to the appropriate type if needed
+			object convertedId = id;
+			if (id is string stringId && keyProperty.PropertyType != typeof(string))
+			{
+				convertedId = Convert.ChangeType(stringId, keyProperty.PropertyType);
+			}
+
+			return await query.AsNoTracking()
+				.FirstOrDefaultAsync(e => EF.Property<object>(e, keyProperty.Name).Equals(convertedId));
+		}
+
+	#endregion
+
+	#region Add, Update, Delete
+	public void Add(T entity)
+	{
+		try
+		{
+			_dbSet.Add(entity);
+		}
+		catch (Exception ex)
+		{
+			throw new Exception($"Error adding entity: {ex.Message}", ex);
+		}
+	}
+
+	public void Update(T entity)
+	{
+		try
+		{
+			_dbSet.Update(entity);
+		}
+		catch (Exception ex)
+		{
+			throw new Exception($"Error updating entity: {ex.Message}", ex);
+		}
+	}
+
+	public void Delete(T entity)
+	{
+		try
+		{
+			_dbSet.Remove(entity);
+		}
+		catch (Exception ex)
+		{
+			throw new Exception($"Error deleting entity: {ex.Message}", ex);
+		}
+	}
+	#endregion
+}
+==================IUnitOfWork======================
+
+	public interface IUnitOfWork : IDisposable
+	{
+		IGenericRepository<StoreAccount> StoreAccountRepo { get; }
+		IGenericRepository<MedicineInformation> MedicineInformationRepo { get; }
+		IGenericRepository<Manufacturer> Manufacturerrepo { get; }
+
+		int Complete();
+	}
+
+	==================UnitOfWork======================
+
+public class UnitOfWork : IUnitOfWork
+{
+	private readonly Fall24PharmaceuticalDbContext _context;
+	private IGenericRepository<Manufacturer> _manufacturerRepo;
+	private IGenericRepository<MedicineInformation> _medicineInformationRepo;
+	private IGenericRepository<StoreAccount> _storeAccountRepo;
+
+	public UnitOfWork(Fall24PharmaceuticalDbContext context)
+	{
+		_context = context;
+	}
+
+	public IGenericRepository<Manufacturer> Manufacturerrepo => _manufacturerRepo ??= new GenericRepository<Manufacturer>(_context);
+
+	public IGenericRepository<StoreAccount> StoreAccountRepo => _storeAccountRepo ??= new GenericRepository<StoreAccount>(_context);
+
+	public IGenericRepository<MedicineInformation> MedicineInformationRepo => _medicineInformationRepo ??= new GenericRepository<MedicineInformation>(_context);
+
+	public int Complete()
+	{
+		return _context.SaveChanges();
+	}
+
+	public void Dispose()
+	{
+		_context.Dispose();
+	}
+}
+==================service======================
+
+
+		public async Task<StoreAccount> LoginAsync(string email, string password)
+		{
+			var accounts = await _unitOfWork.StoreAccountRepo.Get(x => x.EmailAddress == email && x.StoreAccountPassword == password);
+			return accounts.FirstOrDefault();
+		}
+
+
+public class PaintingResponse
+		{
+			public List<Manufacturer> Manufacturer { get; set; }
+			public int TotalPages { get; set; }
+			public int PageIndex { get; set; }
+		}
+
+		public async Task<PaintingResponse> GetAllManufacturersList(int pageIndex,
+			int pageSize,
+			string searchTerm)
+		{
+			Expression<Func<MedicineInformation, object>>[] include = { p => p.Manufacturer };
+var medicines = await _unitOfWork.MedicineInformationRepo.Get(include);
+if (!string.IsNullOrEmpty(searchTerm))
+{
+	medicines = medicines.Where(m =>
+		m.ActiveIngredients.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+		m.ExpirationDate.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+		m.WarningsAndPrecautions.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+		(m.Manufacturer != null && m.Manufacturer.ManufacturerName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+	).ToList();
+}
+int count = medicines.Count;
+int totalPages = (int)Math.Ceiling(count / (double)pageSize);
+var pagedProducts = medicines.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+			return new PaintingResponse
+			{
+				Manufacturer = pagedProducts,
+				TotalPages = totalPages,
+				PageIndex = pageIndex
+			};
+		}
+
+
+<div class="search-section">
+    <form method="get" class="search-form">
+        <div class="search-input-group">
+            <input type="text" name="SearchTerm" class="search-input" placeholder="Search products..." value="@Model.SearchTerm" />
+            <button type="submit" class="btn-search">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+    </form>
+</div>
+
+<nav class="pagination-container">
+    <ul class="pagination">
+        @for (var i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                <a class="page-link" asp-route-pageIndex="@i" asp-route-SearchTerm="@Model.SearchTerm">@i</a>
+            </li>
+        }
+    </ul>
+</nav>
+==================================Index.cshtml.cs=======================================
+ public class IndexModel : PageModel
+    {
+
+		[BindProperty(SupportsGet = true)]
+		public string SearchTerm { get; set; } = default!;
+		[BindProperty(SupportsGet = true)]
+		public string OrderBy { get; set; } = default!;
+		[BindProperty(SupportsGet = true)]
+		public int PageIndex { get; set; } = 1;
+		public int TotalPages { get; set; }
+		public int PageSize { get; set; } = 3;
+		private readonly MedicineInformationService _medicineInformationService;
+
+		public IndexModel(MedicineInformationService medicineInformationService)
+        {
+			_medicineInformationService = medicineInformationService;
+        }
+
+        public IList<MedicineInformation> MedicineInformation { get;set; } = default!;
+
+        public async Task OnGetAsync()
+        {
+			var result = await _medicineInformationService.GetAllMedicineInfomationList(
+				searchTerm: SearchTerm,
+				pageIndex: PageIndex,
+				pageSize: PageSize
+			);
+			PageIndex = result.PageIndex;
+			TotalPages = result.TotalPages;
+			MedicineInformation = result.MedicineInfomation;
+		}
+    }
+
+
+<div class="login-container">
+    <div class="login-card">
+        <div class="login-header">
+            <h1>Login</h1>
+        </div>
+
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="StoreAccount.EmailAddress">Email Address</label>
+                <input asp-for="StoreAccount.EmailAddress" class="form-control" placeholder="Enter your email" />
+                <span asp-validation-for="StoreAccount.EmailAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="StoreAccount.StoreAccountPassword">Password</label>
+                <input type="password" asp-for="StoreAccount.StoreAccountPassword" class="form-control" placeholder="Enter your password" />
+                <span asp-validation-for="StoreAccount.StoreAccountPassword" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-login">Login</button>
+            </div>
+
+            <div class="login-footer">
+                <a asp-page="Index" class="back-link">Back to Home</a>
+            </div>
+        </form>
+    </div>
+</div>
+========================Login================================
+public class LoginModel : PageModel
+{
+	private readonly StoreAccountService _storeAccountService;
+	public LoginModel(StoreAccountService storeAccountService)
+	{
+		_storeAccountService = storeAccountService;
+	}
+	[BindProperty]
+	public StoreAccount StoreAccount { get; set; }
+
+	public string ErrorMessage { get; set; }
+
+	public IActionResult OnGet()
+	{
+		if (User?.Identity?.IsAuthenticated == true)
+		{
+			return RedirectToPage("/Product/Index");
+		}
+		return Page();
+	}
+
+	public async Task<IActionResult> OnPostAsync()
+	{
+		if (User?.Identity?.IsAuthenticated == true)
+		{
+			return RedirectToPage("/Product/Index");
+		}
+
+		var memberAccount = await _storeAccountService.LoginAsync(StoreAccount.EmailAddress, StoreAccount.StoreAccountPassword);
+		if (memberAccount == null)
+		{
+			ErrorMessage = "You do not have permission to do this function!";
+			ModelState.AddModelError(string.Empty, ErrorMessage);
+			return Page();
+		}
+
+		// Ki?m tra quy?n (MemberRole == 1 ho?c 2)
+		if ((memberAccount.Role == 1 || memberAccount.Role == 4))
+		{
+			ErrorMessage = "You do not have permission to do this function!";
+			ModelState.AddModelError(string.Empty, ErrorMessage);
+			return Page();
+		}
+
+		var claims = new List<Claim>
+						{
+							new Claim(ClaimTypes.NameIdentifier, memberAccount.StoreAccountId.ToString()),
+							new Claim(ClaimTypes.Email, memberAccount.EmailAddress),
+							new Claim(ClaimTypes.Name, memberAccount.StoreAccountDescription)
+						};
+
+		if (memberAccount.Role.HasValue)
+		{
+			claims.Add(new Claim(ClaimTypes.Role, memberAccount.Role.Value.ToString()));
+		}
+
+		var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+		var principal = new ClaimsPrincipal(identity);
+
+		await HttpContext.SignInAsync(
+			CookieAuthenticationDefaults.AuthenticationScheme,
+			principal,
+			new AuthenticationProperties
+			{
+				IsPersistent = true,
+				ExpiresUtc = DateTime.UtcNow.AddMinutes(30)
+			});
+
+		return RedirectToPage("/Product/Index");
+	}
+}
+	[Authorize(Roles = "2")]
+======================valide============================
+			if (!ValidateActiveIngredients(MedicineInformation.ActiveIngredients, out string errorMessage))
+			{
+				ModelState.AddModelError("MedicineInformation.ActiveIngredients", errorMessage);
+			}
+private bool ValidateActiveIngredients(string activeIngredients, out string errorMessage)
+        {
+            errorMessage = string.Empty;
+
+            if (string.IsNullOrEmpty(activeIngredients))
+            {
+                errorMessage = "Active Ingredients is required";
+                return false;
+            }
+
+            // Check length - greater than 10 characters
+            if (activeIngredients.Length <= 10)
+            {
+                errorMessage = "Active Ingredients must be greater than 10 characters";
+                return false;
+            }
+
+            // Check for special characters
+            if (Regex.IsMatch(activeIngredients, @"[#@&\(\)]"))
+            {
+                errorMessage = "Active Ingredients cannot contain special characters such as #, @, &, ( or )";
+                return false;
+            }
+
+            // Check that each word begins with a capital letter or number
+            var words = activeIngredients.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            foreach (var word in words)
+            {
+                if (word.Length > 0 && !(char.IsUpper(word[0]) || char.IsDigit(word[0])))
+                {
+                    errorMessage = "Each word in Active Ingredients must begin with a capital letter or a number";
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
