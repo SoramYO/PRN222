@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<div class="login-container">
+    <div class="login-card">
+        <div class="login-header">
+            <h1>Login</h1>
+        </div>
+
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="StoreAccount.EmailAddress">Email Address</label>
+                <input asp-for="StoreAccount.EmailAddress" class="form-control" placeholder="Enter your email" />
+                <span asp-validation-for="StoreAccount.EmailAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="StoreAccount.StoreAccountPassword">Password</label>
+                <input type="password" asp-for="StoreAccount.StoreAccountPassword" class="form-control" placeholder="Enter your password" />
+                <span asp-validation-for="StoreAccount.StoreAccountPassword" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-login">Login</button>
+            </div>
+
+            <div class="login-footer">
+                <a asp-page="Index" class="back-link">Back to Home</a>
+            </div>
+        </form>
+    </div>
+</div>
